@@ -1,0 +1,86 @@
+/* Phone CSS */
+
+/* Utility Classes */
+.h-primary {
+  font-size: 32px;
+}
+
+/* Navigation section */
+#navbar {
+  flex-direction: column;
+  z-index: 5;
+}
+
+
+#navbar ul li a {
+  font-size: 1rem;
+  padding: 0px 10px;
+}
+
+#logo img {
+  margin: 0px 34px;
+  height: 30px;
+  width: 20px;
+  /* background-color: gold;  */
+}
+
+/* Home section */
+#home {
+  height: 480px;
+  padding: 0px 5px;
+}
+
+#home::before {
+  height: 75%;
+}
+#home p {
+  font-size: 22px;
+}
+#btn {
+  font-size: 16px;
+  padding: 4px 10px;
+}
+
+/* service section */
+#service {
+  flex-direction: column;
+  margin: 2px 0px;
+  padding: 8px;
+}
+#service .box {
+  padding: 20px;
+  margin: 15px 0px;
+}
+
+#service p {
+  font-size: 22px;
+}
+
+#service .box:hover {
+  background-color: rgb(255, 234, 234);
+  transform: scale(1);
+  padding: 20px;
+  margin: 2px;
+  box-shadow: 1px 1px 30px 0.2px lightslategray;
+}
+
+/* Client section */
+#clients {
+  flex-wrap: wrap;
+}
+.clients-item {
+  padding: 5px;
+  margin: 50px 0px;
+}
+.clients img {
+  height: 50px;
+}
+/* Contact section */
+
+#submit {
+  font-size: 16px;
+  padding: 4px 10px;
+}
+.contact-box form {
+  width: 85%;
+}
