@@ -1,0 +1,263 @@
+/* Reset CSS  */
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* Navigation Bar  */
+#navbar {
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0px;
+  z-index: 5;
+}
+
+#navbar::before {
+  content: "";
+  background-color: black;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.4;
+}
+
+/* Navigation Bar: logo and Image  */
+
+#logo {
+  margin: 10px 10px;
+}
+#logo img {
+  margin: 10px 34px;
+  height: 40px;
+  width: 30px;
+  /* background-color: gold;  */
+}
+#navbar ul {
+  display: flex;
+}
+#navbar ul li {
+  list-style: none;
+  font-size: 1.3rem;
+}
+#navbar ul li a {
+  color: white;
+  display: block;
+  padding: 3px 22px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-family: "Baloo Bhai 2", cursive;
+}
+#navbar ul li a:hover {
+  color: black;
+  background-color: lightgreen;
+}
+
+/* Home Style  */
+
+#home {
+  display: flex;
+  flex-direction: column;
+  height: 780px;
+  padding: 3px 200px;
+  justify-content: center;
+  align-items: center;
+  font-family: "Baloo Bhaijaan 2", cursive;
+}
+
+#home::before {
+  content: "";
+  background: url(../bg1.jpg) no-repeat center center/cover;
+  position: absolute;
+  height: 110%;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+  opacity: 0.9;
+}
+#home h1 {
+  color: white;
+  text-align: center;
+}
+#home p {
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.btn {
+  padding: 6px 24px;
+  border: 1px solid yellow;
+  background-color: tomato;
+  color: white;
+  margin: 17px;
+  font-size: 1.5rem;
+  border-radius: 20px;
+  cursor: pointer;
+  animation: btn1 1s ease-in infinite;
+}
+
+.btn:hover {
+  background-color: green;
+  border: 2px solid black;
+  color: black;
+  animation: stop;
+}
+@keyframes btn1 {
+  0% {
+    padding: 6px 24px;
+    border: 1px solid yellow;
+  }
+  25% {
+    padding: 3px 12px;
+  }
+  75% {
+    padding: 6px 24px;
+    border: 1px solid yellow;
+  }
+  100% {
+    padding: 3px 12px;
+  }
+}
+/* Class section */
+.h-primary {
+  font-size: 3.8rem;
+  padding: 12px;
+  font-family: "Baloo Bhai 2", cursive;
+  text-shadow: 2px 3px 5px lightslategray;
+}
+.h-secondary {
+  font-size: 2.3rem;
+  padding: 12px;
+  font-family: "Baloo Bhai 2", cursive;
+}
+
+/* Service Section  */
+
+.center {
+  text-align: center;
+}
+
+#Our-service {
+  min-height: 36rem;
+}
+
+#service {
+  margin: 0px;
+  display: flex;
+}
+#service .box {
+  border: 2px solid brown;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 30px;
+  background-color: rgb(237, 237, 237);
+  transition: all 0.3s;
+}
+#service .box:hover {
+  background-color: rgb(255, 234, 234);
+  transform: scale(1.04);
+  padding: 20px;
+  margin: 2px;
+  box-shadow: 1px 1px 30px 0.2px lightslategray;
+}
+#service .box img {
+  height: 160px;
+  display: block;
+  margin: auto;
+}
+#service .box p {
+  font-family: "Baloo Bhai 2", cursive;
+}
+
+/* Client Section  */
+#client {
+  position: relative;
+  height: 320px;
+}
+#client::before {
+  content: "";
+  position: absolute;
+  background-image: url(../bg.jpg);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.4;
+}
+
+.clients {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clients img {
+  height: 78px;
+  transition: 1s 0.4s;
+}
+.clients img:hover {
+  transform: rotate(360deg);
+}
+.clients-item {
+  padding: 34px;
+}
+/* Contact section  */
+
+.contact {
+  position: relative;
+  font-family: "Baloo Bhai 2", cursive;
+}
+.contact::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.7;
+  background: url("../contact.jpg") no-repeat center center/cover;
+}
+.contact-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 40px;
+}
+.contact-box input,
+.contact-box textarea {
+  width: 100%;
+  padding: 0.2rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+}
+
+.contact-box form {
+  width: 40%;
+}
+.contact-box label {
+  font-size: 1.5rem;
+}
+#submit {
+  display: block;
+  margin: auto;
+  background-color: green;
+  color: white;
+  padding: 0.4rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  margin: auto;
+}
+#submit:hover {
+  background-color: rgb(16, 110, 16);
+  border: 2px solid yellow;
+  color: black;
+}
+footer {
+  background-color: black;
+  color: white;
+  padding: auto;
+}
