@@ -1,0 +1,365 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Baloo Bhai 2', cursive;
+}
+
+/* NAVBAR */
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 40px;
+  background: rgba(0,0,0,0.7);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+#logo img {
+  height: 45px;
+  transition: transform 0.4s;
+}
+#logo img:hover {
+  transform: scale(1.1);
+}
+
+#navbar ul {
+  display: flex;
+}
+#navbar ul li {
+  list-style: none;
+}
+#navbar ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  position: relative;
+}
+#navbar ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  background: #00ff9d;
+  left: 50%;
+  bottom: 0;
+  transition: 0.3s;
+  transform: translateX(-50%);
+}
+#navbar ul li a:hover::after {
+  width: 70%;
+}
+/* NAVBAR SLIDE ANIMATION */
+#navbar {
+  animation: slideNav 1s ease-out forwards;
+}
+
+/* KEYFRAMES */
+@keyframes slideNav {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+/* HOME */
+#home {
+  height: 90vh;
+  background: url("../bg1.jpg") center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.btn {
+  padding: 10px 30px;
+  border: none;
+  background: tomato;
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 25px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn:hover {
+  background: green;
+}
+
+/* SERVICES */
+#services {
+  padding: 60px;
+}
+#service {
+  display: flex;
+  gap: 20px;
+}
+.box {
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+  transition: 0.3s;
+}
+.box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px gray;
+}
+.box img {
+  height: 150px;
+}
+
+/* CLIENTS */
+#clients {
+  background: #eee;
+  padding: 50px;
+}
+.clients {
+  display: flex;
+  justify-content: center;
+}
+.clients img {
+  height: 80px;
+  margin: 20px;
+  transition: 0.6s;
+}
+.clients img:hover {
+  transform: rotate(360deg);
+}
+
+/* CONTACT */
+.contact {
+  background: url("../contact.jpg") center/cover no-repeat;
+  padding: 60px;
+}
+.contact-box form {
+  width: 40%;
+  margin: auto;
+}
+.contact-box input,
+.contact-box textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+#submit {
+  background: green;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 10px;
+}
+
+/* UTILITY */
+.center {
+  text-align: center;
+}
+.h-primary {
+  font-size: 3rem;
+}
+.h-secondary {
+  font-size: 1.8rem;
+}
+
+footer {
+  background: black;
+  color: white;
+  padding: 10px;
+}
+/* =======================
+   ATTRACTIVE SERVICES UI
+======================= */
+
+.service-cards {
+  display: flex;
+  gap: 25px;
+  padding: 40px;
+}
+
+.service-card {
+  background: linear-gradient(135deg, #ffffff, #f4f4f4);
+  border-radius: 25px;
+  padding: 25px;
+  text-align: center;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* Glow effect */
+.service-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent, rgba(0,255,157,0.4), transparent);
+  transform: translateX(-100%);
+  transition: 0.6s;
+}
+
+.service-card:hover::before {
+  transform: translateX(100%);
+}
+
+/* Hover animation */
+.service-card:hover {
+  transform: translateY(-15px) scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.service-card img {
+  height: 120px;
+  margin-bottom: 15px;
+  transition: transform 0.4s ease;
+}
+
+.service-card:hover img {
+  transform: scale(1.15) rotate(5deg);
+}
+
+.service-card h2 {
+  color: #222;
+}
+
+.service-card p {
+  color: #555;
+  font-size: 1.1rem;
+}
+/* Animated boy */
+.animated-boy {
+  position: absolute; /* So it floats over the contact section */
+  bottom: 50px;       /* Adjust vertical position */
+  right: 20px;        /* Position from right side */
+  width: 100px;       /* Size of the boy */
+  z-index: 10;
+  animation: moveBoy 3s infinite alternate ease-in-out;
+}
+
+.animated-boy img {
+  width: 100%;
+  animation: waveHand 1s infinite alternate ease-in-out;
+}
+
+/* Side-to-side movement */
+@keyframes moveBoy {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-20px); }
+}
+
+/* Optional: small waving effect */
+@keyframes waveHand {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(10deg); }
+  100% { transform: rotate(0deg); }
+}
+/* CONTACT */
+.contact {
+  background: url("../contact.jpg") center/cover no-repeat;
+  padding: 60px 20px;
+  position: relative;
+}
+
+/* Contact box - flex container */
+.contact-box {
+  display: flex;
+  justify-content: center;  /* center horizontally */
+  align-items: flex-start;  /* align boy & form to top */
+  gap: 30px;
+  flex-wrap: wrap; /* responsive */
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Form styling */
+.contact-box form {
+  flex: 1; /* take remaining space */
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Inputs and textarea */
+.contact-box input,
+.contact-box textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+/* Submit button */
+#submit {
+  background: green;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#submit:hover {
+  background: darkgreen;
+}
+
+/* Animated boy */
+.animated-boy {
+  width: 150px;       /* Adjust size */
+  flex-shrink: 0;     /* don’t shrink */
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  animation: moveSide 2s infinite alternate ease-in-out;
+}
+
+.animated-boy img {
+  width: 100%;
+  animation: waveHand 1s infinite alternate ease-in-out;
+}
+
+/* Side-to-side motion */
+@keyframes moveSide {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(10px); }
+  100% { transform: translateX(0); }
+}
+
+/* Hand waving animation */
+@keyframes waveHand {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(10deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .contact-box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .animated-boy {
+    order: -1; /* boy appears above form on mobile */
+    margin-bottom: 20px;
+  }
+
+  .contact-box form {
+    width: 100%;
+  }
+}
