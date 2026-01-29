@@ -1,0 +1,18 @@
+@media (max-width: 768px) {
+  #navbar {
+    flex-direction: column;
+  }
+
+  #service {
+    flex-direction: column;
+  }
+
+  .contact-box form {
+    width: 90%;
+  }
+}
+@media (max-width: 810px) {
+  .service-cards {
+    flex-direction: column;
+  }
+}
